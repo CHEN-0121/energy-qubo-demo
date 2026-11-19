@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){var THEME_KEY="qubo-energy.theme";(function initTheme() {
+  const root = document.documentElement;
+  let t = null;
+  try {
+    const q = new URLSearchParams(location.search).get("theme");
+    if (q === "light" || q === "dark") {
+      t = q;
+      localStorage.setItem(THEME_KEY, q);
+    }
+    if (!t) t = localStorage.getItem(THEME_KEY);
+  } catch {
+  }
+  if (t !== "dark") t = "light";
+  root.dataset.pref = t;
+  const shown = root.dataset.force || t;
+  if (root.dataset.theme !== shown) root.dataset.theme = shown;
+  return shown;
+})();})();</script>
+  <style>html{background:#C5CED6;color-scheme:light}html[data-theme="dark"]{background:#06080C;color-scheme:dark}</style>
+  <style>:root {--gutter:    clamp(20px, 4vw, 64px);--wrap:      min(1400px, 100% - 2 * var(--gutter));--header-h:  76px;--fs-title:  clamp(40px, 4.2vw, 64px);--fs-h2:     clamp(24px, 2vw, 32px);--fs-h3:     19px;--fs-body:   17px;--fs-lede:   clamp(17px, 1.2vw, 19px);--fs-desc:   15px;--fs-small:  14px;--fs-tag:    12px;--measure:   68ch;--bg:        #C5CED6;--bg-2:      #B7C1CA;--surface:   #D5DCE2;--surface-2: #DFE5EA;--field:     #DFE5EA;--hair:      #AFBAC4;--hair-2:    #9DAAB5;--hair-3:    #7F8D99;--text:      #0E1821;--text-body: #1F2D39;--text-2:    #435360;--accent:    #0B5A6D;--accent-dim:#BFD7DC;--on-accent: #FFFFFF;--quantum:   #5A3F9E;--warn:      #7A5208;--error:     #9E3B2D;--btn-bg:    #DFE5EA;--slider-track: #AFBAC4;--track:     rgba(14, 24, 33, .12);--slab-side: #9DAAB5;--slab-edge: rgba(255, 255, 255, .8);--slab-shadow: rgba(14, 24, 33, .16);--paper:     #1C2833;--ink:       #E6EDF2;--ink-track: rgba(230, 237, 242, .14);--ps-greedy: #6B7884; --ps-sa: #0F6E84; --ps-sqa: #6A4FB0;  --ps-cga: #2E7D4F; --ps-qaoa: #B23A5B;--hd-bg:    #0B1018;--hd-line:  #1E2835;--hd-brand: #E8EEF5;--hd-link:  #8592A3;--hd-cur:   #4FE3D2;--stage-bg:    #1C2833;--stage-text:  #E6EDF2;--stage-text-2:#93A3B0;--stage-line:  #3A4A58;--stage-accent:#58B4C9;--e-coal: #9A5A2E; --e-gas: #2F6DB5; --e-solar: #C98A0E; --e-wind: #1F9A6E;--e-hydro: #2B7FD0; --e-oil: #A8327A; --e-cogen: #D9563F; --e-nuclear: #7B57C2;--se-coal: #A65D3C; --se-gas: #3987E5; --se-solar: #C98500; --se-wind: #199E70;--se-hydro: #6B8FE8; --se-oil: #C851A0; --se-cogen: #D95926; --se-nuclear: #9085E9;--solver-greedy: #6B7884; --solver-sa: #0F6E84; --solver-sqa: #6A4FB0; --solver-cga: #2F7D5B; --solver-qaoa: #A8327A;--stage-greedy: #E6EDF2; --stage-sa: #58B4C9; --stage-sqa: #B79BE0;  --stage-cga: #6FCF97; --stage-qaoa: #C66A9E;--stage-highlight: #E9C46A;--font-sans:  "Noto Sans TC", system-ui, sans-serif;--font-serif: "Noto Serif TC", "Noto Sans TC", serif;--font-mono:  "JetBrains Mono", ui-monospace, "Cascadia Mono", monospace;--ease-out: cubic-bezier(.16, 1, .3, 1);--dur-fast: 200ms;--dur:      320ms;--page-fade: 300ms;color-scheme: light;}:root[data-theme="dark"] {--bg:        #06080C;--bg-2:      #0B1018;--surface:   #101722;--surface-2: #16202E;--field:     #0B1018;--hair:      rgba(232, 238, 245, .08);--hair-2:    rgba(232, 238, 245, .16);--hair-3:    rgba(232, 238, 245, .32);--text:      #E8EEF5;--text-body: #E8EEF5;--text-2:    #8592A3;--accent:    #4FE3D2;--accent-dim:rgba(79, 227, 210, .12);--on-accent: #06080C;--quantum:   #8C7BFF;--warn:      #E8B04A;--error:     #F07A6A;--slider-track: rgba(232, 238, 245, .16);--btn-bg:    transparent;--track:     rgba(232, 238, 245, .08);--slab-side: #03050A;--slab-edge: rgba(232, 238, 245, .32);--slab-shadow: rgba(0, 0, 0, .45);--paper:     #E8EEF5;--ink:       #06080C;--ink-track: rgba(6, 8, 12, .1);--stage-bg:    #0B1018;--stage-text:  #E8EEF5;--stage-text-2:#8592A3;--stage-line:  rgba(232, 238, 245, .18);--stage-accent:#4FE3D2;--e-coal: #A65D3C; --e-gas: #4A7AD8; --e-solar: #C98500; --e-wind: #199E70;--e-hydro: #6B8FE8; --e-oil: #C851A0; --e-cogen: #D95926; --e-nuclear: #A07BE0;--se-coal: #A65D3C; --se-gas: #4A7AD8; --se-solar: #C98500; --se-wind: #199E70;--se-hydro: #6B8FE8; --se-oil: #C851A0; --se-cogen: #D95926; --se-nuclear: #A07BE0;--solver-greedy: #AEB8C4; --solver-sa: #4FE3D2; --solver-sqa: #A898FF; --solver-cga: #6FCF97; --solver-qaoa: #E07AC0;--stage-greedy: #E8EEF5; --stage-sa: #4FE3D2; --stage-sqa: #A898FF;  --stage-cga: #6FCF97; --stage-qaoa: #E07AC0;--stage-highlight: #E8B04A;color-scheme: dark;}@media (max-width: 760px) {:root { --header-h: 64px; }}.q-wrap { box-sizing: border-box; width: var(--wrap); margin-inline: auto; }.hd{position:fixed;inset:0 var(--sbw,0px) auto 0;z-index:999990;font-family:var(--font-sans);color:var(--hd-brand);font-size:var(--fs-body);line-height:1.7;-webkit-font-smoothing:antialiased}.hd *,.hd *::before,.hd *::after{box-sizing:border-box}.hd a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}.hd button{font:inherit;color:inherit;margin:0;-webkit-tap-highlight-color:transparent}.hd :focus-visible{outline:1.5px solid var(--hd-cur);outline-offset:3px;border-radius:4px}.hd::before{content:"";position:absolute;inset:0;background:var(--hd-bg);border-bottom:1px solid rgba(255,255,255,.06);transition:background-color 250ms ease,backdrop-filter 250ms ease,-webkit-backdrop-filter 250ms ease}.hd.scrolled::before{background:rgba(11,16,24,.35);-webkit-backdrop-filter:blur(12px) saturate(1.2);backdrop-filter:blur(12px) saturate(1.2)}.hd.scrolled.over-light::before,.hd.scrolled.on-light::before{background:rgba(11,16,24,.92)}.hd.open::before{background:var(--hd-bg)}.hd .brand,.hd .links a,.hd .menu{text-shadow:0 1px 8px rgba(0,0,0,.5)}.hd-in{position:relative;box-sizing:border-box;width:var(--wrap);margin:0 auto;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:24px}.hd .brand{font-size:18px;font-weight:600;letter-spacing:.04em;line-height:1;cursor:pointer;white-space:nowrap}.hd .links{display:flex;gap:36px}.hd .links a,.hd .sheet a{position:relative;padding:10px 0;font-size:16px;line-height:1.7;color:var(--hd-link);cursor:pointer;touch-action:manipulation;transition:color var(--dur-fast) var(--ease-out)}.hd .links a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:var(--hd-cur);transform:scaleX(0);transform-origin:left;transition:transform var(--dur) var(--ease-out)}.hd .links a:hover{color:var(--hd-brand)}.hd .links a[aria-current="page"]{color:var(--hd-cur)}.hd .links a[aria-current="page"]::after{transform:scaleX(1)}.hd .menu{display:none;position:relative;width:44px;height:44px;margin-right:-10px;padding:10px;border:0;border-radius:22px;background:none;cursor:pointer;touch-action:manipulation}.hd .menu svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}.hd .menu path{transition:transform var(--dur) var(--ease-out);transform-origin:12px 12px}.hd.open .menu .l1{transform:translateY(4px) rotate(45deg)}.hd.open .menu .l2{transform:translateY(-4px) rotate(-45deg)}.hd .sheet{display:none}.hd .skip{position:absolute;left:16px;top:-56px;z-index:2;padding:8px 14px;border-radius:6px;background:var(--hd-brand);color:var(--hd-bg);font-size:var(--fs-small);line-height:1.4;transition:transform var(--dur) var(--ease-out)}.hd .skip:focus-visible{transform:translateY(80px)}@media (max-width:860px){.hd .links{display:none}.hd .menu{display:block}.hd .sheet{display:grid;position:absolute;left:0;right:0;top:var(--header-h);padding:6px var(--gutter) 16px;background:var(--hd-bg);border-bottom:1px solid var(--hd-line);transform:translateY(-10px);opacity:0;visibility:hidden;transition:transform var(--dur) var(--ease-out),opacity var(--dur-fast) var(--ease-out),visibility 0s linear var(--dur)}.hd.open .sheet{transform:none;opacity:1;visibility:visible;transition:transform var(--dur) var(--ease-out),opacity var(--dur-fast) var(--ease-out),visibility 0s}.hd .sheet a{padding:14px 4px;font-size:17px;border-bottom:1px solid var(--hd-line)}.hd .sheet a[aria-current="page"]{color:var(--hd-cur)}}@media (max-width:760px){.hd .brand{font-size:17px}}@media (prefers-reduced-motion: reduce){.hd,.hd *,.hd *::before,.hd *::after{transition-duration:0s !important}}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>關於｜QUBO 能源調度</title>
+  <meta name="description" content="國立屏東大學資訊科學系專題：台灣能源調度的 QUBO 最佳化。作者、指導教授與資料來源。">
+  <meta name="theme-color" content="#0B1018">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap">
+  <script type="module" crossorigin src="/energy-qubo-demo/assets/about-BRspfJUq.js"></script>
+  <link rel="modulepreload" crossorigin href="/energy-qubo-demo/assets/site-header-B9owv2G_.js">
+  <link rel="stylesheet" crossorigin href="/energy-qubo-demo/assets/site-header-B09BHWYy.css">
+  <link rel="stylesheet" crossorigin href="/energy-qubo-demo/assets/about-DwrN2pi0.css">
+</head>
+<body>
+  <header class="hd" id="hd" data-cur="about">
+  <a class="skip" id="skip" href="#main">跳到主要內容</a>
+  <div class="hd-in">
+    <a class="brand" id="brand" data-k="home" href="https://chen-0121.github.io/energy-qubo-demo/"><span translate="no">QUBO</span> 能源調度</a>
+    <nav class="links" id="links" aria-label="主要頁面"><a href="https://chen-0121.github.io/energy-qubo-demo/" data-k="home" data-app="0">首頁</a><span class="nav-off" data-k="simulator" title="模擬台只在現場展示時開放">模擬台<small>現場展示</small></span><span class="nav-off" data-k="results" title="模擬台只在現場展示時開放">結果分析<small>現場展示</small></span><a href="https://chen-0121.github.io/energy-qubo-demo/about.html" data-k="about" data-app="0" aria-current="page">關於</a></nav>
+    <button type="button" class="menu" id="menu" aria-label="開啟選單" aria-expanded="false" aria-controls="sheet">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M4 8h16"/><path class="l2" d="M4 16h16"/></svg>
+    </button>
+  </div>
+  <nav class="sheet" id="sheet" aria-label="主要頁面"><a href="https://chen-0121.github.io/energy-qubo-demo/" data-k="home" data-app="0">首頁</a><span class="nav-off" data-k="simulator" title="模擬台只在現場展示時開放">模擬台<small>現場展示</small></span><span class="nav-off" data-k="results" title="模擬台只在現場展示時開放">結果分析<small>現場展示</small></span><a href="https://chen-0121.github.io/energy-qubo-demo/about.html" data-k="about" data-app="0" aria-current="page">關於</a></nav>
+</header>
+
+  <main id="main" class="pg">
+    <header class="pg-hd">
+      <p class="tag">[ ABOUT ]</p>
+      <h1 class="ttl2">關於<span class="serif">這個專題</span></h1>
+      <p class="lede">台灣能源調度的 QUBO 最佳化：把八種電源的年度發電配置寫成 177 個二元變數的 QUBO，在相同的政策約束下比較不同的求解器。</p>
+    </header>
+
+    <section class="blk" aria-labelledby="a-who">
+      <div><p class="tag">[ PEOPLE ]</p><h2 id="a-who">作者與單位</h2></div>
+      <div class="body">
+        <dl class="who">
+          <div><dt>作者</dt><dd>吳承祐</dd></div>
+          <div><dt>指導教授</dt><dd>歐家和</dd></div>
+          <div><dt>單位</dt><dd>國立屏東大學　資訊科學系</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="blk" aria-labelledby="a-src">
+      <div><p class="tag">[ SOURCES ]</p><h2 id="a-src">資料來源</h2></div>
+      <div class="body">
+        <ol class="refs">
+          <li id="ref-1"><span>台灣電力公司，〈歷年發購電量占比〉。2025 年台電系統發電量中，再生能源占 12.7%。　<a href="https://www.taipower.com.tw/2289/2363/2367/2372/10312/" target="_blank" rel="noopener noreferrer">台電</a></span></li>
+          <li id="ref-2"><span>行政院，2025 年電力配比目標：再生能源 20%、天然氣 50%、燃煤 30%。　<a href="https://www.ey.gov.tw/Page/9277F759E41CCD91/2d29e028-7d04-4ca0-9be1-ee48f0097f77" target="_blank" rel="noopener noreferrer">行政院</a></span></li>
+          <li id="ref-3"><span>行政院，〈能源配比及電價政策專案報告〉，2024 年 10 月 29 日。2030 年再生能源發電占比 30% 的階段目標。　<a href="https://www.ey.gov.tw/File/D3AAA937ED1EEB09" target="_blank" rel="noopener noreferrer">行政院</a></span></li>
+          <li id="ref-4"><span>台灣電力公司，核三 2 號機運轉 40 年執照屆期依法停機之說明。　<a href="https://hc2.taipower.com.tw/2289/2323/2332/62570/" target="_blank" rel="noopener noreferrer">台電</a></span></li>
+        </ol>
+      </div>
+    </section>
+
+    <footer class="pft"><span>國立屏東大學　資訊科學系</span><span><span translate="no">QUBO</span> 能源調度　專題　2026</span></footer>
+  </main>
+</body>
+</html>

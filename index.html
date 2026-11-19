@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){document.documentElement.dataset.force="dark";var THEME_KEY="qubo-energy.theme";(function initTheme() {
+  const root = document.documentElement;
+  let t = null;
+  try {
+    const q = new URLSearchParams(location.search).get("theme");
+    if (q === "light" || q === "dark") {
+      t = q;
+      localStorage.setItem(THEME_KEY, q);
+    }
+    if (!t) t = localStorage.getItem(THEME_KEY);
+  } catch {
+  }
+  if (t !== "dark") t = "light";
+  root.dataset.pref = t;
+  const shown = root.dataset.force || t;
+  if (root.dataset.theme !== shown) root.dataset.theme = shown;
+  return shown;
+})();})();</script>
+  <style>html{background:#C5CED6;color-scheme:light}html[data-theme="dark"]{background:#06080C;color-scheme:dark}</style>
+  <style>:root {--gutter:    clamp(20px, 4vw, 64px);--wrap:      min(1400px, 100% - 2 * var(--gutter));--header-h:  76px;--fs-title:  clamp(40px, 4.2vw, 64px);--fs-h2:     clamp(24px, 2vw, 32px);--fs-h3:     19px;--fs-body:   17px;--fs-lede:   clamp(17px, 1.2vw, 19px);--fs-desc:   15px;--fs-small:  14px;--fs-tag:    12px;--measure:   68ch;--bg:        #C5CED6;--bg-2:      #B7C1CA;--surface:   #D5DCE2;--surface-2: #DFE5EA;--field:     #DFE5EA;--hair:      #AFBAC4;--hair-2:    #9DAAB5;--hair-3:    #7F8D99;--text:      #0E1821;--text-body: #1F2D39;--text-2:    #435360;--accent:    #0B5A6D;--accent-dim:#BFD7DC;--on-accent: #FFFFFF;--quantum:   #5A3F9E;--warn:      #7A5208;--error:     #9E3B2D;--btn-bg:    #DFE5EA;--slider-track: #AFBAC4;--track:     rgba(14, 24, 33, .12);--slab-side: #9DAAB5;--slab-edge: rgba(255, 255, 255, .8);--slab-shadow: rgba(14, 24, 33, .16);--paper:     #1C2833;--ink:       #E6EDF2;--ink-track: rgba(230, 237, 242, .14);--ps-greedy: #6B7884; --ps-sa: #0F6E84; --ps-sqa: #6A4FB0;  --ps-cga: #2E7D4F; --ps-qaoa: #B23A5B;--hd-bg:    #0B1018;--hd-line:  #1E2835;--hd-brand: #E8EEF5;--hd-link:  #8592A3;--hd-cur:   #4FE3D2;--stage-bg:    #1C2833;--stage-text:  #E6EDF2;--stage-text-2:#93A3B0;--stage-line:  #3A4A58;--stage-accent:#58B4C9;--e-coal: #9A5A2E; --e-gas: #2F6DB5; --e-solar: #C98A0E; --e-wind: #1F9A6E;--e-hydro: #2B7FD0; --e-oil: #A8327A; --e-cogen: #D9563F; --e-nuclear: #7B57C2;--se-coal: #A65D3C; --se-gas: #3987E5; --se-solar: #C98500; --se-wind: #199E70;--se-hydro: #6B8FE8; --se-oil: #C851A0; --se-cogen: #D95926; --se-nuclear: #9085E9;--solver-greedy: #6B7884; --solver-sa: #0F6E84; --solver-sqa: #6A4FB0; --solver-cga: #2F7D5B; --solver-qaoa: #A8327A;--stage-greedy: #E6EDF2; --stage-sa: #58B4C9; --stage-sqa: #B79BE0;  --stage-cga: #6FCF97; --stage-qaoa: #C66A9E;--stage-highlight: #E9C46A;--font-sans:  "Noto Sans TC", system-ui, sans-serif;--font-serif: "Noto Serif TC", "Noto Sans TC", serif;--font-mono:  "JetBrains Mono", ui-monospace, "Cascadia Mono", monospace;--ease-out: cubic-bezier(.16, 1, .3, 1);--dur-fast: 200ms;--dur:      320ms;--page-fade: 300ms;color-scheme: light;}:root[data-theme="dark"] {--bg:        #06080C;--bg-2:      #0B1018;--surface:   #101722;--surface-2: #16202E;--field:     #0B1018;--hair:      rgba(232, 238, 245, .08);--hair-2:    rgba(232, 238, 245, .16);--hair-3:    rgba(232, 238, 245, .32);--text:      #E8EEF5;--text-body: #E8EEF5;--text-2:    #8592A3;--accent:    #4FE3D2;--accent-dim:rgba(79, 227, 210, .12);--on-accent: #06080C;--quantum:   #8C7BFF;--warn:      #E8B04A;--error:     #F07A6A;--slider-track: rgba(232, 238, 245, .16);--btn-bg:    transparent;--track:     rgba(232, 238, 245, .08);--slab-side: #03050A;--slab-edge: rgba(232, 238, 245, .32);--slab-shadow: rgba(0, 0, 0, .45);--paper:     #E8EEF5;--ink:       #06080C;--ink-track: rgba(6, 8, 12, .1);--stage-bg:    #0B1018;--stage-text:  #E8EEF5;--stage-text-2:#8592A3;--stage-line:  rgba(232, 238, 245, .18);--stage-accent:#4FE3D2;--e-coal: #A65D3C; --e-gas: #4A7AD8; --e-solar: #C98500; --e-wind: #199E70;--e-hydro: #6B8FE8; --e-oil: #C851A0; --e-cogen: #D95926; --e-nuclear: #A07BE0;--se-coal: #A65D3C; --se-gas: #4A7AD8; --se-solar: #C98500; --se-wind: #199E70;--se-hydro: #6B8FE8; --se-oil: #C851A0; --se-cogen: #D95926; --se-nuclear: #A07BE0;--solver-greedy: #AEB8C4; --solver-sa: #4FE3D2; --solver-sqa: #A898FF; --solver-cga: #6FCF97; --solver-qaoa: #E07AC0;--stage-greedy: #E8EEF5; --stage-sa: #4FE3D2; --stage-sqa: #A898FF;  --stage-cga: #6FCF97; --stage-qaoa: #E07AC0;--stage-highlight: #E8B04A;color-scheme: dark;}@media (max-width: 760px) {:root { --header-h: 64px; }}.q-wrap { box-sizing: border-box; width: var(--wrap); margin-inline: auto; }.hd{position:fixed;inset:0 var(--sbw,0px) auto 0;z-index:999990;font-family:var(--font-sans);color:var(--hd-brand);font-size:var(--fs-body);line-height:1.7;-webkit-font-smoothing:antialiased}.hd *,.hd *::before,.hd *::after{box-sizing:border-box}.hd a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}.hd button{font:inherit;color:inherit;margin:0;-webkit-tap-highlight-color:transparent}.hd :focus-visible{outline:1.5px solid var(--hd-cur);outline-offset:3px;border-radius:4px}.hd::before{content:"";position:absolute;inset:0;background:var(--hd-bg);border-bottom:1px solid rgba(255,255,255,.06);transition:background-color 250ms ease,backdrop-filter 250ms ease,-webkit-backdrop-filter 250ms ease}.hd.scrolled::before{background:rgba(11,16,24,.35);-webkit-backdrop-filter:blur(12px) saturate(1.2);backdrop-filter:blur(12px) saturate(1.2)}.hd.scrolled.over-light::before,.hd.scrolled.on-light::before{background:rgba(11,16,24,.92)}.hd.open::before{background:var(--hd-bg)}.hd .brand,.hd .links a,.hd .menu{text-shadow:0 1px 8px rgba(0,0,0,.5)}.hd-in{position:relative;box-sizing:border-box;width:var(--wrap);margin:0 auto;height:var(--header-h);display:flex;align-items:center;justify-content:space-between;gap:24px}.hd .brand{font-size:18px;font-weight:600;letter-spacing:.04em;line-height:1;cursor:pointer;white-space:nowrap}.hd .links{display:flex;gap:36px}.hd .links a,.hd .sheet a{position:relative;padding:10px 0;font-size:16px;line-height:1.7;color:var(--hd-link);cursor:pointer;touch-action:manipulation;transition:color var(--dur-fast) var(--ease-out)}.hd .links a::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:1px;background:var(--hd-cur);transform:scaleX(0);transform-origin:left;transition:transform var(--dur) var(--ease-out)}.hd .links a:hover{color:var(--hd-brand)}.hd .links a[aria-current="page"]{color:var(--hd-cur)}.hd .links a[aria-current="page"]::after{transform:scaleX(1)}.hd .menu{display:none;position:relative;width:44px;height:44px;margin-right:-10px;padding:10px;border:0;border-radius:22px;background:none;cursor:pointer;touch-action:manipulation}.hd .menu svg{display:block;width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}.hd .menu path{transition:transform var(--dur) var(--ease-out);transform-origin:12px 12px}.hd.open .menu .l1{transform:translateY(4px) rotate(45deg)}.hd.open .menu .l2{transform:translateY(-4px) rotate(-45deg)}.hd .sheet{display:none}.hd .skip{position:absolute;left:16px;top:-56px;z-index:2;padding:8px 14px;border-radius:6px;background:var(--hd-brand);color:var(--hd-bg);font-size:var(--fs-small);line-height:1.4;transition:transform var(--dur) var(--ease-out)}.hd .skip:focus-visible{transform:translateY(80px)}@media (max-width:860px){.hd .links{display:none}.hd .menu{display:block}.hd .sheet{display:grid;position:absolute;left:0;right:0;top:var(--header-h);padding:6px var(--gutter) 16px;background:var(--hd-bg);border-bottom:1px solid var(--hd-line);transform:translateY(-10px);opacity:0;visibility:hidden;transition:transform var(--dur) var(--ease-out),opacity var(--dur-fast) var(--ease-out),visibility 0s linear var(--dur)}.hd.open .sheet{transform:none;opacity:1;visibility:visible;transition:transform var(--dur) var(--ease-out),opacity var(--dur-fast) var(--ease-out),visibility 0s}.hd .sheet a{padding:14px 4px;font-size:17px;border-bottom:1px solid var(--hd-line)}.hd .sheet a[aria-current="page"]{color:var(--hd-cur)}}@media (max-width:760px){.hd .brand{font-size:17px}}@media (prefers-reduced-motion: reduce){.hd,.hd *,.hd *::before,.hd *::after{transition-duration:0s !important}}</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QUBO 能源調度</title>
+  <meta name="description" content="把台灣八種電源的發電配置寫成 177 個位元的 QUBO，比較四種求解器，另做 24 位元的 QAOA 縮小版。國立屏東大學資訊科學系專題。">
+  <meta name="theme-color" content="#0B1018">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@500;700&display=swap">
+  <script type="module" crossorigin src="/energy-qubo-demo/assets/index-Bx080HRo.js"></script>
+  <link rel="modulepreload" crossorigin href="/energy-qubo-demo/assets/site-header-B9owv2G_.js">
+  <link rel="stylesheet" crossorigin href="/energy-qubo-demo/assets/site-header-B09BHWYy.css">
+  <link rel="stylesheet" crossorigin href="/energy-qubo-demo/assets/index-BsNGcX41.css">
+</head>
+<body>
+  <header class="hd" id="hd" data-cur="home">
+  <a class="skip" id="skip" href="#main">跳到主要內容</a>
+  <div class="hd-in">
+    <a class="brand" id="brand" data-k="home" href="https://chen-0121.github.io/energy-qubo-demo/"><span translate="no">QUBO</span> 能源調度</a>
+    <nav class="links" id="links" aria-label="主要頁面"><a href="https://chen-0121.github.io/energy-qubo-demo/" data-k="home" data-app="0" aria-current="page">首頁</a><span class="nav-off" data-k="simulator" title="模擬台只在現場展示時開放">模擬台<small>現場展示</small></span><span class="nav-off" data-k="results" title="模擬台只在現場展示時開放">結果分析<small>現場展示</small></span><a href="https://chen-0121.github.io/energy-qubo-demo/about.html" data-k="about" data-app="0">關於</a></nav>
+    <button type="button" class="menu" id="menu" aria-label="開啟選單" aria-expanded="false" aria-controls="sheet">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="l1" d="M4 8h16"/><path class="l2" d="M4 16h16"/></svg>
+    </button>
+  </div>
+  <nav class="sheet" id="sheet" aria-label="主要頁面"><a href="https://chen-0121.github.io/energy-qubo-demo/" data-k="home" data-app="0" aria-current="page">首頁</a><span class="nav-off" data-k="simulator" title="模擬台只在現場展示時開放">模擬台<small>現場展示</small></span><span class="nav-off" data-k="results" title="模擬台只在現場展示時開放">結果分析<small>現場展示</small></span><a href="https://chen-0121.github.io/energy-qubo-demo/about.html" data-k="about" data-app="0">關於</a></nav>
+</header>
+
+
+  <nav class="toc" id="toc" aria-label="章節">
+    <button type="button" class="toc-toggle" id="toc-toggle" aria-expanded="false" aria-controls="toc-list"><span id="toc-cur">01</span> / <span id="toc-total">08</span></button>
+    <ol class="toc-list" id="toc-list"></ol>
+  </nav>
+
+  <!-- 粒子畫布：只在開場、量測與退火兩章出現，並跟著該章一起捲動 -->
+  <canvas id="gl" aria-hidden="true"></canvas>
+  <div class="poles" id="poles" aria-hidden="true"><span class="pole" id="p0">|0⟩</span><span class="pole" id="p1">|1⟩</span></div>
+
+  <main id="main">
+    <!-- 01 開場 -->
+    <section class="ch clear" id="ch1" data-name="開場" aria-label="開場">
+      <div class="ghost" aria-hidden="true" translate="no">QUBO</div>
+      <div class="inner hero">
+        <div class="txt" id="ch1-txt">
+          <h1 class="ttl"><span class="ln"><span>八種電源，</span></span><span class="ln"><span class="serif">找一個最低點。</span></span></h1>
+          <ul class="tags fx" aria-label="規模"><li>[ 177 BITS ]</li><li>[ 4 SOLVERS ]</li><li>[ 24-BIT QAOA ]</li></ul>
+          <div class="btns fx">
+            <a class="btn pri" data-go="simulator">進入模擬台</a>
+            <button type="button" class="btn ghost-btn" id="pause" aria-pressed="false">暫停動畫</button>
+          </div>
+        </div>
+        <div class="pfield" id="pf1" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 02 動機：照 poster 的 Introduction、Research Challenge；政策數字只當「限制從哪來」，放在文字旁並標來源 -->
+    <section class="ch clear" id="motive" data-name="動機" aria-labelledby="mo-t">
+      <div class="inner split mo">
+        <div class="txt">
+          <p class="tag fx">[ MOTIVATION ]</p>
+          <h2 class="ttl2" id="mo-t"><span class="ln"><span>非核、低碳之下，</span></span><span class="ln"><span>每種電源該發多少？</span></span></h2>
+          <p class="lede fx">台灣正走向非核、低碳的電力系統，每年都要決定各種電源發多少電。</p>
+          <p class="lede fx">這份配置要同時兼顧成本、碳排和供電穩定，三者互相拉扯：燃煤便宜，但碳排高；再生能源乾淨，但出力不穩定。</p>
+          <p class="lede fx">發電量只能一格一格地選（八種電源各選一格就有約 <span id="mo-oh">5.1</span> 億種組合），再加上很多政策限制，傳統的混合整數規劃在這種規模下很難擴展。</p>
+          <p class="lede fx">所以我們把它寫成 QUBO，交給不同類型的求解器去找。</p>
+          <aside class="mo-side fx" aria-labelledby="ms-h">
+            <p class="ms-h" id="ms-h">限制從哪來</p>
+            <ul>
+              <li>再生能源至少 20%、燃煤最多 30%、燃氣最多 50%<a class="gs" href="about.html#ref-2">行政院</a></li>
+              <li>核能為 0<a class="gs" href="about.html#ref-4">台電</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="gfx mo-wrap"><svg id="mofig" role="img" aria-label="三個目標互相拉扯：成本、碳排、穩定；燃煤便宜但碳排高，再生能源乾淨但不穩定。三者都落在一份發電配置上。這件事難在發電量一格一格、政策限制很多，混合整數規劃難以擴展，所以寫成 QUBO，交給不同類型的求解器。"></svg></div>
+      </div>
+    </section>
+
+    <!-- 03 問題：流程圖 -->
+    <section class="ch clear" id="ch2" data-name="問題" aria-labelledby="ch2-t">
+      <div class="inner split">
+        <div class="txt">
+          <p class="tag fx">[ PROBLEM ]</p>
+          <h2 class="ttl2" id="ch2-t"><span class="ln"><span>八種電源，</span></span><span class="ln"><span>寫成一個 QUBO。</span></span></h2>
+          <p class="lede fx">每種電源的發電量編成位元，成本、碳排與限制都寫進同一個能量函數。四種求解器各自去找能量最低的那組位元，解回來就是一份發電配置。</p>
+          <!-- 這個專題做了什麼：bounded-slack（數字來自 home-data.json 的 slack，extract_poster.py 用主實驗檔的發電等級算出） -->
+          <div class="bs fx">
+            <h3 class="bs-h">我們的做法：供需允許差 ±<span class="bs-max">50</span> 億度</h3>
+            <p class="bs-p">要求總發電量和需求完全相等太嚴：需求 <span id="bs-d">2,524</span> 億度時，各選一格又符合政策限制、總和剛好等於需求的組合只有 <b id="bs-strict">990</b> 種，求解器很容易找不到合法解。我們允許兩者差在 ±<span class="bs-max">50</span> 億度以內，類似電網保留的備轉容量；再加一個偏差懲罰，差越多分數越差，把解拉回接近需求。合法的組合因此增加到 <b id="bs-band">約 1,011 萬</b> 種。</p>
+            <figure class="bs-fig"><div id="bsfig" role="img"></div><figcaption>每個點是一個求解器在一個需求量下最好的一次；共 6 個需求量</figcaption></figure>
+          </div>
+        </div>
+        <div class="gfx flow-wrap"><svg id="flow" role="img" aria-label="流程：八種電源、QUBO、四種求解器、發電配置"></svg></div>
+      </div>
+    </section>
+
+    <!-- 04 量測與退火：延續第 01 章的粒子球 -->
+    <section class="ch clear" id="ch3" data-name="量測與退火" aria-labelledby="ch3-t">
+      <div class="inner split">
+        <div class="txt">
+          <p class="tag fx">[ MEASURE &amp; ANNEAL ]</p>
+          <h2 class="ttl2" id="ch3-t"><span class="ln"><span>量測之後，</span></span><span class="ln"><span>每個變數只剩 0 或 1。</span></span></h2>
+          <p class="lede fx">球面上的粒子塌縮到兩極，再排成 177 個位元。溫度高時位元一直翻轉，降溫後翻得越來越少，最後全部定住。</p>
+          <div class="numblk" id="numblk">
+            <p class="num" id="numv" aria-label="2 的 177 次方，約等於 1.92 乘以 10 的 53 次方"><span aria-hidden="true">2<sup id="numn">177</sup><span class="op">≈</span><span class="coef" id="coef">1.92</span><span class="op">×</span>10<sup id="nume">53</sup></span></p>
+            <p class="numcap">種可能的配置，退火只停在其中一種。</p>
+            <p class="numcap" id="ohcap">每種電源各選一格的配置只有 24<sup>5</sup> × 8<sup>2</sup> ≈ 5.1 億種（不含鬆弛變數），其他組合都違反「只選一格」，所以要靠懲罰項把它們的能量推高。</p>
+          </div>
+        </div>
+        <div class="pfield" id="pf3" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- 05 發電配置 -->
+    <section class="ch" id="ch4" data-name="發電配置" aria-labelledby="ch4-t">
+      <div class="inner split disp">
+        <div class="txt">
+          <p class="tag fx">[ DISPATCH ]</p>
+          <h2 class="ttl2" id="ch4-t"><span class="ln"><span>定住的位元，</span></span><span class="ln"><span>就是一份發電配置。</span></span></h2>
+          <p class="lede fx">每種電源一列，每一格是一個發電等級，一列只會亮一格。位元解碼回每種電源的發電量；核能依現行政策設為零。</p>
+          <p class="note fx" id="disp-note">每列的格數取自主實驗檔。</p>
+        </div>
+        <div class="gfx dispatch"><svg id="dispatch" role="img" aria-label="發電配置"></svg></div>
+      </div>
+    </section>
+
+    <!-- 06 求解器 ＋ 07 淺色區塊從下方蓋上來 -->
+    <div class="stack" id="stack">
+      <section class="ch dark2" id="ch5" data-name="求解器" aria-labelledby="ch5-t">
+        <div class="inner sv" id="ch5-in">
+          <div class="txt">
+            <p class="tag fx">[ SOLVERS ]</p>
+            <h2 class="ttl2" id="ch5-t"><span class="ln"><span>同一個問題，</span></span><span class="ln"><span>四種找法。</span></span></h2>
+            <p class="lede fx">滑過或選取一列，預覽會播放那個求解器在能量地形上的搜尋方式。原理和模擬台的動畫相同。</p>
+          </div>
+          <div class="gfx sv-grid">
+            <table class="sv-table">
+              <thead><tr><th scope="col">名稱</th><th scope="col" class="c-type">類型</th><th scope="col">說明</th></tr></thead>
+              <tbody id="sv-rows"></tbody>
+            </table>
+            <figure class="preview">
+              <div id="pv" class="pv-stage" role="img" aria-label="求解器在能量地形上的搜尋動畫"></div>
+              <figcaption><span id="pv-name">[ SA ]</span><span id="pv-info"></span></figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="dim" id="ch5-dim" aria-hidden="true"></div>
+      </section>
+
+      <section class="ch light" id="ch6" data-name="一句話" aria-labelledby="ch6-t">
+        <div class="card6" id="card6">
+          <div class="inner one">
+            <div class="txt">
+              <p class="tag fx">[ ONE PROBLEM ]</p>
+              <h2 class="big" id="ch6-t"><span class="ln"><span>同一個問題，</span></span><span class="ln"><span>交給四種求解器。</span></span></h2>
+              <p class="lede fx">同一個情境、同一個能量函數，比較四種求解器找到的綜合目標 H<sub>obj</sub>。</p>
+              <a class="btn ink fx" data-go="simulator">到模擬台自己比</a>
+            </div>
+            <div class="gfx cmp">
+              <p class="cmp-hd"><span>綜合目標 H<sub>obj</sub>，越低越好</span><span class="cmp-tag" id="cmp-tag">基準情境</span></p>
+              <div class="cmp-bars" id="cmp" role="img" aria-label="四種求解器的 H_obj 比較"></div>
+              <p class="cmp-note" id="cmp-note"></p>
+            </div>
+          </div>
+        </div>
+        <div class="dim" id="ch6-dim" aria-hidden="true"></div>
+      </section>
+
+      <!-- 08 結論（深色圓角卡片，從下方蓋上第 07 章，進出方式同 06 → 07）：照 poster 的 Results、Conclusion；數字來自 home-data.json（extract_poster.py → gen_home_data.py） -->
+      <section class="ch clear" id="concl" data-name="結論" aria-labelledby="cc-t">
+        <div class="card8" id="card8">
+        <div class="inner cc">
+          <div class="txt cc-hd">
+            <p class="tag fx">[ CONCLUSION ]</p>
+            <h2 class="ttl2" id="cc-t"><span class="ln"><span>每個需求量，</span></span><span class="ln"><span>CGA 的 H<sub>obj</sub> 都最低。</span></span></h2>
+          </div>
+          <ul class="finds" id="finds"></ul>
+          <p class="cc-sum" id="cc-sum"></p>
+          <div class="cc-foot">
+            <p class="cc-src" id="cc-src"></p>
+            <p class="cc-more"><a class="cc-link" data-go="results">到結果分析頁看完整數據</a></p>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- 頁尾：高度等於內容（不列入章節導覽） -->
+    <footer class="ch foot" id="ch7" data-name="頁尾">
+      <div class="inner ft-in">
+        <div class="ft-id">
+          <p class="ft-unit">國立屏東大學　資訊科學系</p>
+          <p class="ft-meta"><span translate="no">QUBO</span> 能源調度　專題　2026</p>
+        </div>
+        <div class="ft-side">
+          <a class="btn pri" data-go="simulator">進入模擬台</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+</body>
+</html>
